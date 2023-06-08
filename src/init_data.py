@@ -21,6 +21,8 @@ def load_data():
     T = 60
     #曲の長さ
     t = dict(zip(df['曲名'], df['長さ']))
+    #明るさリスト
+    b = dict(zip(df["曲名"],df["明るさ"]))
     #共通の曲リスト
     songs_player1 = set(df[df['人'] == 1]['曲名'])
     songs_player2 = set(df[df['人'] == 2]['曲名'])
@@ -28,4 +30,4 @@ def load_data():
     #最大歌う回数
     K = T//df["長さ"].min()
     K = [k for k in range(1,int(K)+1)]
-    return S, I, V, P, T, t, C, K
+    return S, I, V, P, T, t,b, C, K
