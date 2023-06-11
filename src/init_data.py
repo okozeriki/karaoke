@@ -30,4 +30,4 @@ def load_data():
     #最大歌う回数
     K = T//df["長さ"].min()
     K = [k for k in range(1,int(K)+1)]
-    return S, I, V, P, T, t,b, C, K
+    return S, I, V, P, T, t, b, C, K
